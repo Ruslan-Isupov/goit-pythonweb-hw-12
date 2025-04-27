@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+*.pyc
+.env
+postgres-data/
+docs/_build/
