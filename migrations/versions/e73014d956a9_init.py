@@ -31,6 +31,7 @@ def upgrade() -> None:
         sa.Column("created_at", sa.DateTime(), nullable=True),
         sa.Column("avatar", sa.String(length=255), nullable=True),
         sa.Column("confirmed", sa.Boolean(), nullable=True),
+        sa.Column("role", sa.Enum("USER", "ADMIN", name="userrole"), nullable=False),
         sa.PrimaryKeyConstraint("id"),
         sa.UniqueConstraint("email"),
         sa.UniqueConstraint("username"),
